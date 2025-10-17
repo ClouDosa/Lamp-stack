@@ -1,6 +1,6 @@
 # LAMP Stack Setup on CentOS Stream 9
 
-## Overview
+Overview
 
 This repository contains a complete, working example of how to configure a **LAMP** (Linux, Apache, MySQL/MariaDB and PHP) stack on **CentOS Stream 9**.  The goal is to provide a reproducible reference project you can check out, follow along with, and adapt for your own web‑application deployments.  All of the files live in a single Git tree, making it easy to version control your infrastructure as code.
 
