@@ -49,11 +49,11 @@ The `sample_site/` directory holds two example PHP files:
 - `phpinfo.php` – this file calls `phpinfo()` to display your server's PHP configuration.  Visiting it in a browser confirms that Apache and PHP are working together【480713083918559†L116-L135】.
 - `index.php` – a minimal application that displays a greeting and attempts a database connection using PDO.  Use it as a starting point for your own applications.
 
-## Quick Start
 
-These instructions assume you have a freshly installed CentOS Stream 9 server with sudo privileges and an internet connection.
 
-### Running via Ansible (recommended)
+
+
+### Running via Ansible 
 
 1. Install Ansible on your local machine or on the server.  On CentOS 9 the package is available in the default repository:
 
@@ -92,12 +92,12 @@ These instructions assume you have a freshly installed CentOS Stream 9 server 
 
    This script performs the following steps:
    - Updates the package index (`dnf update`).
-   - Installs `httpd` and starts/enables the Apache service【480713083918559†L53-L67】.
-   - Installs `mariadb-server` and starts/enables it【480713083918559†L72-L84】.
-   - Runs `mysql_secure_installation` to set a root password and remove test databases【480713083918559†L84-L87】.
-   - Installs PHP and common extensions【480713083918559†L88-L95】.
-   - Restarts Apache to load the PHP module【99786774743717†L122-L124】.
-   - Opens HTTP/HTTPS ports in the firewall if `firewalld` is present.【99786774743717†L62-L66】
+   - Installs `httpd` and starts/enables the Apache service.
+   - Installs `mariadb-server` and starts/enables it.
+   - Runs `mysql_secure_installation` to set a root password and remove test databases.
+   - Installs PHP and common extensions
+   - Restarts Apache to load the PHP module
+   - Opens HTTP/HTTPS ports in the firewall if `firewalld` is present.
 
 3. (Optional) Create a database and user by running:
 
