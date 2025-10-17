@@ -1,0 +1,12 @@
+---
+# Top‑level playbook for installing a LAMP stack on CentOS Stream 9.
+
+- hosts: all
+  become: yes
+  vars:
+    # Set a default MariaDB root password.  Change this to a strong value.
+    mariadb_root_password: change_me
+  roles:
+    - apache
+    - mariadb
+    - php

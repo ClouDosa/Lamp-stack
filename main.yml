@@ -1,0 +1,22 @@
+---
+# Role: php
+# Install PHP and common extensions for CentOS Stream 9.
+
+- name: Install PHP and extensions
+  dnf:
+    name:
+      - php
+      - php-cli
+      - php-common
+      - php-gd
+      - php-mysqlnd
+      - php-pdo
+      - php-mbstring
+      - php-opcache
+      - php-xml
+    state: present
+
+- name: Restart Apache to load PHP module
+  service:
+    name: httpd
+    state: restarted
